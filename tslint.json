@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": [
+    "tslint-no-focused-test"
+  ],
+  "rules": {
+    "import-name": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "variable-name": false,
+    "no-focused-test": true, 
+    "object-shorthand-properties-first": false,
+    "no-unused-variable": true
+  },
+  "linterOptions": {
+    "exclude": ["bin", "dist", "tmp", "node_modules"]
+  }
+}
