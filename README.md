@@ -5,7 +5,9 @@ This project contains a single microservice allowing a client (the front-end) to
 
 ## Installation
 
-For run the project on local env, docker is necessary 
+For run the project on local, docker is necessary 
+
+**node** >= 18
 
 RUN
 ```bash
