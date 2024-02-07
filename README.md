@@ -43,12 +43,6 @@ RUN
 | `winnerId`      | `string` | **Required**. Mongo cat id |
 | `loserId`      | `string` | **Required**.  Mongo cat id |
 
-
-
-# L'atelier back-end
-
-Ce projet contient un seul microservice permettant à un client (le front-end) de pouvoir requêter le service 
-
 ## Deployment
 
 To deploy this project run
