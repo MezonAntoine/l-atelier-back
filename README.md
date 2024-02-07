@@ -43,11 +43,6 @@ RUN
 | `winnerId`      | `string` | **Required**. Mongo cat id |
 | `loserId`      | `string` | **Required**.  Mongo cat id |
 
-## Deployment
+# Author
 
-To deploy this project run
-
-```bash
-  npm run deploy
-```
-
+### Antoine Mezon
