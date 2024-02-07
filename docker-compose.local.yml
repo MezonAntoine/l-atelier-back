@@ -1,0 +1,34 @@
+version: '3.7'
+services:
+  api:
+    image: atelier-api
+    container_name: atelier-api
+    build:
+      context: .
+      dockerfile: Dockerfile.debug
+      cache_from:
+        - 'atelier-api'
+    links:
+      - mongo
+    working_dir: /app
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./nodemon.json:/home/node/app/nodemon.json
+
+    command: yarn run api:debug
+
+  mongo:
+    container_name: atelier_mongodb
+    image: bitnami/mongodb:4.4
+    environment:
+      - MONGODB_DISABLE_SYSTEM_LOG=true
+      - MONGODB_SYSTEM_LOG_VERBOSITY=0
+    volumes:
+      - ./tmp/mongo_data:/bitnami/mongodb
+    ports:
+      - '27018:27017'
+    logging:
+      driver: none
