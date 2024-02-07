@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*"],
+      "common/*": ["./src/common/*"],
+      "config/*": ["./config/*"]
+    },
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "lib": ["es2017", "dom"],
+    "incremental": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "typeRoots": ["./node_modules/@types", "./src/common/types"],
+    "types": []
+  },
+  "ts-node": {
+    // "require": ["tsconfig-paths/register"],
+    "esm": true
+  },
+  "include": ["./**/*"],
+  "files": ["src/common/types/index.d.ts"]
+}
