@@ -1,17 +1,14 @@
 import { Types } from 'mongoose';
 
-export interface IAtelierCat {
-    id: string;
-    url: string;
+export interface IDuel {
+    _winner: Types.ObjectId;
+    _loser: Types.ObjectId;
 }
 
-export interface INewCat {
+export interface ICat {
+    _id?: string;
     picture_url: string;
     external_id: string;
-}
-
-export interface ICat extends INewCat {
-    _id: Types.ObjectId;
 }
 
 export interface ICatNumberOf {
