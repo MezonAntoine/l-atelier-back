@@ -13,7 +13,7 @@ export default {
   services: {
     api: {
       http: {
-        max_request_body_size: '100mb',
+        max_request_body_size: '1mb',
         port: process.env.PORT || 3000,
       },
     },
