@@ -6,11 +6,13 @@ const DuelSchema = new Schema(
         _winner: {
             type: Schema.Types.ObjectId,
             ref: 'Cat',
+            required: true,
             index: true,
         },
         _loser: {
             type: Schema.Types.ObjectId,
             ref: 'Cat',
+            required: true,
             index: true,
         },
     },
