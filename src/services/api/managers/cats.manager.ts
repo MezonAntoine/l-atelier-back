@@ -18,11 +18,17 @@ export const getRankedCats = async (): Promise<ICat[]> => {
                             {
                                 case: {
                                     $and: [
-                                        { $eq: ['$number_of.defeats', Number(0)] },
-                                        { $gt: ['$number_of.victories', Number(0)] },
+                                        { $eq: ['$number_of.defeats', 0] },
+                                        { $gt: ['$number_of.victories', 0] },
                                     ],
                                 },
                                 then: 1, // Chats sans défaites et avec victoires
+                            },
+                            {
+                                case: { $ne: ['$number_of.defeats', 0] },
+                                then: {
+                                    $divide: ['$number_of.victories', '$number_of.defeats'], // Ratio victoires/défaites pour les autres chats
+                                },
                             },
                             {
                                 case: { $ne: ['$number_of.defeats', 0] },
